@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WeLoveRoguelike - Best Online Roguelike Games Collection</title>
+    <meta name="description" content="Discover and play the best roguelike and roguelite games online. Experience pixel-perfect dungeon crawling adventures in your browser.">
+    <meta name="keywords" content="roguelike, roguelite, online games, dungeon crawler, pixel art games">
+    <link rel="canonical" href="https://weloveroguelike.online" />
+    <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        body {
+            background: url('asset/images/roguelike-bg-pixel-campfire.png') no-repeat center center fixed;
+            background-size: cover;
+            position: relative;
+        }
+        body::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(to bottom, rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.8));
+            z-index: -1;
+        }
+        .pixel-font {
+            font-family: 'Press Start 2P', cursive;
+            text-shadow: 2px 2px 0px #000;
+            letter-spacing: 2px;
+        }
+        .pixel-border {
+            position: relative;
+            border: 4px solid transparent;
+            background-clip: padding-box;
+        }
+        .pixel-border::after {
+            content: '';
+            position: absolute;
+            top: -4px; bottom: -4px;
+            left: -4px; right: -4px;
+            background: linear-gradient(45deg, #ffd700, #ff6b6b);
+            z-index: -1;
+            clip-path: polygon(
+                0 4px, 4px 4px, 4px 0,
+                calc(100% - 4px) 0, calc(100% - 4px) 4px, 100% 4px,
+                100% calc(100% - 4px), calc(100% - 4px) calc(100% - 4px), calc(100% - 4px) 100%,
+                4px 100%, 4px calc(100% - 4px), 0 calc(100% - 4px)
+            );
+        }
+        .game-frame-container {
+            position: relative;
+            width: 100%;
+            padding-top: 30%;
+            background: rgba(0, 0, 0, 0.3);
+            border-radius: 8px;
+            overflow: hidden;
+        }
+        .game-frame-container iframe {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            border: none;
+        }
+    </style>
+</head>
+<body class="min-h-screen text-gray-100">
+    <header class="container mx-auto px-4 py-8">
+        <h1 class="text-3xl md:text-5xl text-center text-yellow-400 mb-8 pixel-font p-6">
+            WeLoveRoguelike
+        </h1>
+        <nav class="flex flex-wrap justify-center gap-6 mb-8">
+            <h2 class="text-lg md:text-xl pixel-font hover:text-yellow-400 transition-colors">
+                <a href="#featured">Featured</a>
+            </h2>
+            <h2 class="text-lg md:text-xl pixel-font hover:text-yellow-400 transition-colors">
+                <a href="#popular">Popular</a>
+            </h2>
+            <h2 class="text-lg md:text-xl pixel-font hover:text-yellow-400 transition-colors">
+                <a href="#new">New</a>
+            </h2>
+            <h2 class="text-lg md:text-xl pixel-font hover:text-yellow-400 transition-colors">
+                <a href="#about">About</a>
+            </h2>
+        </nav>
+    </header>
+    <main class="container mx-auto px-4">
+        <section id="featured" class="mb-16">
+            <div class="max-w-4xl mx-auto bg-gray-900 bg-opacity-60 rounded-lg p-6 pixel-border">
+                <h3 class="text-2xl text-yellow-400 mb-4 pixel-font">Roulette Knight</h3>
+                <p class="mb-6 text-gray-300">A unique roguelike where every decision is a gamble. Spin the wheel, face your destiny, and survive the dungeon's challenges.</p>
+                <div class="game-frame-container">
+                    <iframe src="https://itch.io/embed/250895">
+                        <a href="https://fourquarters.itch.io/roulette-knight-ludum-dare-41">Roulette Knight (Ludum Dare 41) by Four Quarters team</a>
+                    </iframe>
+                </div>
+            </div>
+        </section>
+    </main>
+    <footer class="container mx-auto px-4 py-8 text-center text-gray-400">
+        <p class="pixel-font text-sm">© 2024 WeLoveRoguelike.online</p>
+        <p class="mt-4 pixel-font text-xs">Made with ❤️ for roguelike enthusiasts</p>
+    </footer>
+</body>
+</html>
