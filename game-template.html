@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Game Title - WeLoveRoguelike</title>
+    <meta name="description" content="Game description goes here">
+    <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&family=SF+Pro+Display:wght@400;500;600&display=swap" rel="stylesheet">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        body {
+            background: url('asset/images/roguelike-bg-pixel-campfire.png') no-repeat center center fixed;
+            background-size: cover;
+            position: relative;
+        }
+        body::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(to bottom, rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.8));
+            z-index: -1;
+        }
+        .pixel-font {
+            font-family: 'Press Start 2P', cursive;
+            text-shadow: 2px 2px 0px #000;
+            letter-spacing: 2px;
+        }
+        .apple-font {
+            font-family: 'SF Pro Display', -apple-system, BlinkMacSystemFont, sans-serif;
+        }
+        .game-frame-container {
+            position: relative;
+            width: 100%;
+            padding-top: 56.25%; /* 16:9 Aspect Ratio */
+            background: rgba(0, 0, 0, 0.3);
+            border-radius: 8px;
+            overflow: hidden;
+        }
+        .game-frame-container iframe {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            border: none;
+        }
+        .star-rating {
+            color: #ffd700;
+            cursor: pointer;
+        }
+        .star-rating:hover {
+            color: #ffed4a;
+        }
+    </style>
+</head>
+<body class="min-h-screen text-gray-100">
+    <header class="container mx-auto px-4 py-8">
+        <h1 class="text-3xl md:text-5xl text-center text-yellow-400 mb-8 pixel-font p-6">
+            <a href="index.html">WeLoveRoguelike</a>
+        </h1>
+        <nav class="flex flex-wrap justify-center gap-6 mb-8">
+            <h2 class="text-lg md:text-xl pixel-font">
+                <a href="featured.html">Featured</a>
+            </h2>
+            <h2 class="text-lg md:text-xl pixel-font">
+                <a href="#popular">Popular</a>
+            </h2>
+            <h2 class="text-lg md:text-xl pixel-font">
+                <a href="#new">New</a>
+            </h2>
+            <h2 class="text-lg md:text-xl pixel-font">
+                <a href="#about">About</a>
+            </h2>
+        </nav>
+    </header>
+
+    <main class="container mx-auto px-4">
+        <div class="max-w-4xl mx-auto">
+            <!-- 游戏标题和描述 -->
+            <div class="mb-8">
+                <h2 class="text-2xl text-yellow-400 pixel-font mb-4">Game Title</h2>
+                <p class="text-gray-300 apple-font">Game description goes here. This is where you'll write a compelling description of the game.</p>
+            </div>
+
+            <!-- 游戏框架 -->
+            <div class="game-frame-container mb-8">
+                <iframe src="YOUR_GAME_IFRAME_URL_HERE"></iframe>
+            </div>
+
+            <!-- 游戏控制说明 -->
+            <div class="bg-gray-900 bg-opacity-60 rounded-lg p-6 mb-8">
+                <h3 class="text-xl text-yellow-400 pixel-font mb-4">How to Play</h3>
+                <div class="apple-font text-gray-300">
+                    <p>Add your game controls and instructions here.</p>
+                </div>
+            </div>
+
+            <!-- 评分系统 -->
+            <div class="bg-gray-900 bg-opacity-60 rounded-lg p-6 mb-8">
+                <h3 class="text-xl text-yellow-400 pixel-font mb-4">Rate This Game</h3>
+                <div class="flex items-center space-x-2 mb-4">
+                    <span class="star-rating">★</span>
+                    <span class="star-rating">★</span>
+                    <span class="star-rating">★</span>
+                    <span class="star-rating">★</span>
+                    <span class="star-rating">★</span>
+                </div>
+                <p class="text-sm text-gray-400 apple-font">Average Rating: 4.5/5 (128 ratings)</p>
+            </div>
+
+            <!-- 评论系统 -->
+            <div class="bg-gray-900 bg-opacity-60 rounded-lg p-6 mb-8">
+                <h3 class="text-xl text-yellow-400 pixel-font mb-4">Comments</h3>
+                <div class="space-y-4">
+                    <!-- 评论示例 -->
+                    <div class="border-b border-gray-700 pb-4">
+                        <div class="flex items-center justify-between mb-2">
+                            <span class="text-yellow-400 apple-font">Player123</span>
+                            <span class="text-sm text-gray-400 apple-font">2 days ago</span>
+                        </div>
+                        <p class="text-gray-300 apple-font">Great game! The mechanics are really interesting.</p>
+                        <div class="flex items-center space-x-1 mt-2">
+                            <span class="text-yellow-400">★</span>
+                            <span class="text-yellow-400">★</span>
+                            <span class="text-yellow-400">★</span>
+                            <span class="text-yellow-400">★</span>
+                            <span class="text-yellow-400">★</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 相关游戏推荐 -->
+            <div class="bg-gray-900 bg-opacity-60 rounded-lg p-6">
+                <h3 class="text-xl text-yellow-400 pixel-font mb-4">Similar Games</h3>
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                    <a href="#" class="block p-4 bg-gray-800 rounded-lg hover:bg-gray-700 transition-colors">
+                        <h4 class="text-yellow-400 pixel-font text-sm mb-2">Similar Game 1</h4>
+                        <p class="text-gray-300 apple-font text-sm">Brief description of the similar game.</p>
+                    </a>
+                    <a href="#" class="block p-4 bg-gray-800 rounded-lg hover:bg-gray-700 transition-colors">
+                        <h4 class="text-yellow-400 pixel-font text-sm mb-2">Similar Game 2</h4>
+                        <p class="text-gray-300 apple-font text-sm">Brief description of the similar game.</p>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <footer class="container mx-auto px-4 py-8 text-center text-gray-400 mt-12">
+        <p class="pixel-font text-sm">© 2024 WeLoveRoguelike.online</p>
+        <p class="mt-4 pixel-font text-xs">Made with ❤️ for roguelike enthusiasts</p>
+    </footer>
+</body>
+</html>

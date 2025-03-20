@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Featured Games - WeLoveRoguelike</title>
+    <meta name="description" content="Browse our collection of featured roguelike games. Filter by type, platform, and more.">
+    <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&family=SF+Pro+Display:wght@400;500;600&display=swap" rel="stylesheet">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        body {
+            background: url('asset/images/roguelike-bg-pixel-campfire.png') no-repeat center center fixed;
+            background-size: cover;
+            position: relative;
+        }
+        body::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(to bottom, rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.8));
+            z-index: -1;
+        }
+        .pixel-font {
+            font-family: 'Press Start 2P', cursive;
+            text-shadow: 2px 2px 0px #000;
+            letter-spacing: 2px;
+        }
+        .apple-font {
+            font-family: 'SF Pro Display', -apple-system, BlinkMacSystemFont, sans-serif;
+        }
+        .game-card {
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+        .game-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
+        }
+        .nav-link {
+            transition: color 0.3s ease;
+        }
+        .nav-link:hover {
+            color: #ff6b6b;
+        }
+        .category-section {
+            background: rgba(0, 0, 0, 0.3);
+            border-radius: 8px;
+            padding: 1rem;
+            margin-bottom: 1rem;
+        }
+    </style>
+</head>
+<body class="min-h-screen text-gray-100">
+    <header class="container mx-auto px-4 py-8">
+        <h1 class="text-3xl md:text-5xl text-center text-yellow-400 mb-8 pixel-font p-6">
+            <a href="index.html">WeLoveRoguelike</a>
+        </h1>
+        <nav class="flex flex-wrap justify-center gap-6 mb-8">
+            <h2 class="text-lg md:text-xl pixel-font nav-link">
+                <a href="featured.html">Featured</a>
+            </h2>
+            <h2 class="text-lg md:text-xl pixel-font nav-link">
+                <a href="#popular">Popular</a>
+            </h2>
+            <h2 class="text-lg md:text-xl pixel-font nav-link">
+                <a href="#new">New</a>
+            </h2>
+            <h2 class="text-lg md:text-xl pixel-font nav-link">
+                <a href="#about">About</a>
+            </h2>
+        </nav>
+    </header>
+
+    <main class="container mx-auto px-4">
+        <div class="flex flex-col md:flex-row gap-8">
+            <!-- 左侧分类导航 -->
+            <aside class="w-full md:w-64 flex-shrink-0">
+                <div class="sticky top-4">
+                    <div class="category-section">
+                        <h3 class="text-yellow-400 pixel-font text-sm mb-4">Game Types</h3>
+                        <ul class="space-y-2 apple-font">
+                            <li><a href="#" class="nav-link">Action</a></li>
+                            <li><a href="#" class="nav-link">Card</a></li>
+                            <li><a href="#" class="nav-link">Strategy</a></li>
+                            <li><a href="#" class="nav-link">Shooter</a></li>
+                            <li><a href="#" class="nav-link">Open World</a></li>
+                            <li><a href="#" class="nav-link">MMO</a></li>
+                        </ul>
+                    </div>
+
+                    <div class="category-section">
+                        <h3 class="text-yellow-400 pixel-font text-sm mb-4">Features</h3>
+                        <ul class="space-y-2 apple-font">
+                            <li><a href="#" class="nav-link">Dungeon</a></li>
+                            <li><a href="#" class="nav-link">3D</a></li>
+                            <li><a href="#" class="nav-link">Pixel Art</a></li>
+                            <li><a href="#" class="nav-link">Bullet Hell</a></li>
+                        </ul>
+                    </div>
+
+                    <div class="category-section">
+                        <h3 class="text-yellow-400 pixel-font text-sm mb-4">Platform</h3>
+                        <ul class="space-y-2 apple-font">
+                            <li><a href="#" class="nav-link">PC</a></li>
+                            <li><a href="#" class="nav-link">Android</a></li>
+                            <li><a href="#" class="nav-link">iOS</a></li>
+                            <li><a href="#" class="nav-link">Web</a></li>
+                        </ul>
+                    </div>
+
+                    <div class="category-section">
+                        <h3 class="text-yellow-400 pixel-font text-sm mb-4">Price</h3>
+                        <ul class="space-y-2 apple-font">
+                            <li><a href="#" class="nav-link">Free</a></li>
+                            <li><a href="#" class="nav-link">Paid</a></li>
+                            <li><a href="#" class="nav-link">In-App Purchase</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </aside>
+
+            <!-- 右侧游戏卡片瀑布流 -->
+            <div class="flex-1">
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+                    <!-- Roulette Knight -->
+                    <div class="game-card bg-gray-900 bg-opacity-60 rounded-lg overflow-hidden">
+                        <div class="aspect-w-16 aspect-h-9">
+                            <img src="asset/images/roulette-knight-thumb.jpg" alt="Roulette Knight" class="w-full h-full object-cover">
+                        </div>
+                        <div class="p-4">
+                            <h3 class="text-xl text-yellow-400 pixel-font mb-2">Roulette Knight</h3>
+                            <p class="text-gray-300 apple-font text-sm mb-4">A unique roguelike where every decision is a gamble.</p>
+                            <div class="flex items-center justify-between">
+                                <span class="text-sm text-gray-400 apple-font">Action • Free</span>
+                                <a href="roulette-knight.html" class="text-yellow-400 hover:text-yellow-300 pixel-font text-sm">Play Now →</a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Dice Dungeon -->
+                    <div class="game-card bg-gray-900 bg-opacity-60 rounded-lg overflow-hidden">
+                        <div class="aspect-w-16 aspect-h-9">
+                            <img src="asset/images/dice-dungeon-thumb.jpg" alt="Dice Dungeon" class="w-full h-full object-cover">
+                        </div>
+                        <div class="p-4">
+                            <h3 class="text-xl text-yellow-400 pixel-font mb-2">Dice Dungeon</h3>
+                            <p class="text-gray-300 apple-font text-sm mb-4">Roll the dice and face the challenges of the dungeon.</p>
+                            <div class="flex items-center justify-between">
+                                <span class="text-sm text-gray-400 apple-font">Strategy • Free</span>
+                                <a href="#" class="text-yellow-400 hover:text-yellow-300 pixel-font text-sm">Coming Soon</a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Lucky Knight -->
+                    <div class="game-card bg-gray-900 bg-opacity-60 rounded-lg overflow-hidden">
+                        <div class="aspect-w-16 aspect-h-9">
+                            <img src="asset/images/lucky-knight-thumb.jpg" alt="Lucky Knight" class="w-full h-full object-cover">
+                        </div>
+                        <div class="p-4">
+                            <h3 class="text-xl text-yellow-400 pixel-font mb-2">Lucky Knight</h3>
+                            <p class="text-gray-300 apple-font text-sm mb-4">Test your luck in this exciting roguelike adventure.</p>
+                            <div class="flex items-center justify-between">
+                                <span class="text-sm text-gray-400 apple-font">Action • Free</span>
+                                <a href="#" class="text-yellow-400 hover:text-yellow-300 pixel-font text-sm">Coming Soon</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <footer class="container mx-auto px-4 py-8 text-center text-gray-400 mt-12">
+        <p class="pixel-font text-sm">© 2024 WeLoveRoguelike.online</p>
+        <p class="mt-4 pixel-font text-xs">Made with ❤️ for roguelike enthusiasts</p>
+    </footer>
+</body>
+</html>
